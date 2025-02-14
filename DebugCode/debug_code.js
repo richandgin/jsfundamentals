@@ -7,6 +7,8 @@ function performOperation() {
     if (!isNaN(num1) && !isNaN(num2)) {
     // Perform the operation
                     let result = multiply(num1, num2);
+                    result = addition (result, num2);
+                    result = division (result, num2);
 
                     // Display the result
                     displayResult(result);
@@ -21,6 +23,16 @@ function multiply(a, b) {
 
     // Multiply the numbers
     return a * b;
+}
+
+function addition(a, b) {
+    // Add two units
+    return a + b;
+}
+
+function division (a, b) {
+    // Devide two numbers a over b
+    return a / b;
 }
 
 function displayResult(result) {
