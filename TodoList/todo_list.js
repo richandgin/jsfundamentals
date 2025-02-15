@@ -9,11 +9,10 @@ let tasks = [];
 function addTask() {
     const taskText = taskInput.value.trim();
     if (taskText !== "") {
-        tasks.push({text: taskText});
+        tasks.push({ text: taskText});
         taskInput.value = "";
         displayTasks();
     }
-    addTaskBtn.addEventListener("click", addTask);
 }
 
 function displayTasks() {
@@ -35,6 +34,7 @@ function toggleTask() {
 function clearCompletedTasks() {
     tasks = tasks.filter(task => !task.completed);
     displayTasks();
-    clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 }
 
+addTaskBtn.addEventListener("click", addTask);
+clearCompletedBtn.addEventListener("click", clearCompletedTasks);
