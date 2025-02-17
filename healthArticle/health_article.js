@@ -4,15 +4,12 @@ xhr.open('GET', url, true);
 //debugger
 xhr.responseType = 'json';
 
-xhr.send();
-
 xhr.onload = function() {
     //var articles = JSON.parse(xhr.response.articles);
     var articles = xhr.response.articles
     var articlesDiv = document.getElementById('articles');
-}
 
-articles.forEach(function(article) {
+    articles.forEach(function(article) {
     var articleDiv = document.createElement('div');
     articleDiv.classList.add('article');
 
@@ -51,5 +48,10 @@ articles.forEach(function(article) {
 
     articlesDiv.appendChild(articleDiv);
   });
+}
+
+xhr.send();
+
+
 
  
