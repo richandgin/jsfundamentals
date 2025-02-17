@@ -1,9 +1,14 @@
 var xhr = new XMLHttpRequest();
 var url = './health_article.json';
 xhr.open('GET', url, true);
+//debugger
 xhr.responseType = 'json';
+
+xhr.send();
+
 xhr.onload = function() {
-    var articles = xhr.response.articles;
+    //var articles = JSON.parse(xhr.response.articles);
+    var articles = xhr.response.articles
     var articlesDiv = document.getElementById('articles');
 }
 
@@ -47,4 +52,4 @@ articles.forEach(function(article) {
     articlesDiv.appendChild(articleDiv);
   });
 
-  xhr.send();
+ 
